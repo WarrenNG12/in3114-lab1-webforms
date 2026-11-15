@@ -12,6 +12,31 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand">APAS</span>
+
+                <asp:Panel ID="pnlAnonimo" runat="server" CssClass="navbar-nav">
+                    <asp:HyperLink ID="lnkIngresar" runat="server" NavigateUrl="~/Login.aspx" CssClass="nav-link">Ingresar</asp:HyperLink>
+                </asp:Panel>
+
+                <asp:Panel ID="pnlRecepcion" runat="server" CssClass="navbar-nav">
+                    <asp:HyperLink ID="lnkRegistrar" runat="server" NavigateUrl="~/Registrar.aspx" CssClass="nav-link">Registrar entrega</asp:HyperLink>
+                    <asp:HyperLink ID="lnkConsultarRecepcion" runat="server" NavigateUrl="~/Consultar.aspx" CssClass="nav-link">Consultar entregas</asp:HyperLink>
+                </asp:Panel>
+
+                <asp:Panel ID="pnlAdmin" runat="server" CssClass="navbar-nav">
+                    <asp:HyperLink ID="lnkConsultarAdmin" runat="server" NavigateUrl="~/Consultar.aspx" CssClass="nav-link">Consultar entregas</asp:HyperLink>
+                </asp:Panel>
+
+                <asp:Panel ID="pnlSesion" runat="server" CssClass="navbar-nav ms-auto">
+                    <span class="navbar-text me-3">
+                        <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+                    </span>
+                    <asp:LinkButton ID="lnkCerrarSesion" runat="server" CssClass="nav-link">Cerrar sesión</asp:LinkButton>
+                </asp:Panel>
+            </div>
+        </nav>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
