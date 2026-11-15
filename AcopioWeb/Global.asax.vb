@@ -4,5 +4,6 @@ Public Class Global_asax
 
     Sub Application_Start(sender As Object, e As EventArgs)
         ' Se desencadena al iniciar la aplicación
+        InicializadorIdentity.CrearRolesYUsuarios()
     End Sub
 End Class
